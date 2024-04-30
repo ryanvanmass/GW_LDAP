@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install sssd -y
 
 
-sudo cp $pwd/sssd.conf /etc/sssd/
+sudo cp ./sssd.conf /etc/sssd/
 
 sudo chown root:root /etc/sssd/sssd.conf
 sudo chmod 600 /etc/sssd/sssd.conf
