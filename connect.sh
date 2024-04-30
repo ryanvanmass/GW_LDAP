@@ -10,5 +10,5 @@ sudo chmod 600 /etc/sssd/sssd.conf
 
 sudo systemctl restart sssd
 
-sudo usermod -aG sudo ryan_vanmassenhoven
-su ryan_vanmassenhoven -c "ssh-import-id-gh ryanvanmass"
+sudo usermod -aG sudo ryan
+su ryan -c "ssh-import-id-gh ryanvanmass"
