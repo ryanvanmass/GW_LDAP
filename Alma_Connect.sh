@@ -11,8 +11,10 @@ sudo chmod 600 /etc/sssd/sssd.conf
 sudo su -c 'echo "session optional  pam_mkhomedir.so skel=/etc/skel umask=077" >> /etc/pam.d/common-session'
 
 # User Specific Config
-mkhomedir_helper ryan
-usermod -aG wheel ryan
-wget -O - https://github.com/ryanvanmass.keys >> /home/ryan/.ssh/authorized_keys
+sudo systemctl restart sssd
+sudo mkhomedir_helper ryan
+sudo usermod -aG wheel ryan
+sudo mkdir /home/ryan/.ssh
+sudo wget -O - https://github.com/ryanvanmass.keys >> /home/ryan/.ssh/authorized_keys
 
 
