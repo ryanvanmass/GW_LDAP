@@ -15,6 +15,9 @@ sudo systemctl restart sssd
 sudo mkhomedir_helper ryan
 sudo usermod -aG wheel ryan
 sudo mkdir /home/ryan/.ssh
+sudo chown ryan /home/ryan/.ssh
+sudo chgrp 1016624533 /home/ryan/.ssh
 sudo wget -O - https://github.com/ryanvanmass.keys >> /home/ryan/.ssh/authorized_keys
-
+sudo chown ryan /home/ryan/.ssh/authorized_keys
+sudo chgrp 1016624533 /home/ryan/.ssh/authorized_keys
 
